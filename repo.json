@@ -1,0 +1,70 @@
+{
+  "name": "Custom Content Repository",
+  "version": 1,
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+  "repositories": [
+    {
+      "id": "ak_sv_ones",
+      "name": "AK.SV Ones",
+      "type": "movie",
+      "base_url": "https://ak.sv/ones",
+      "search": "/search?q={query}",
+      "list": "/popular?page={page}",
+      "extractors": [
+        {
+          "type": "html",
+          "list": {
+            "container": "div.movie-item",
+            "name": "a.title",
+            "url": "a@href",
+            "thumbnail": "img@src",
+            "metadata": {
+              "description": "div.description",
+              "year": "div.year"
+            }
+          },
+          "details": {
+            "container": "div.movie-details",
+            "stream_links": "a.stream@href",
+            "metadata": {
+              "genres": "span.genres",
+              "rating": "span.rating"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "serieztime",
+      "name": "Seriez Time",
+      "type": "series",
+      "base_url": "https://serieztime.com/m6",
+      "search": "/search?q={query}",
+      "list": "/trending?page={page}",
+      "extractors": [
+        {
+          "type": "html",
+          "list": {
+            "container": "div.show-item",
+            "name": "a.title",
+            "url": "a@href",
+            "thumbnail": "img@src",
+            "metadata": {
+              "description": "div.description",
+              "year": "div.year"
+            }
+          },
+          "details": {
+            "container": "div.show-details",
+            "stream_links": "a.episode@href",
+            "metadata": {
+              "seasons": "div.seasons",
+              "genres": "span.genres",
+              "rating": "span.rating"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
