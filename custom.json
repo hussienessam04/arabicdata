@@ -1,0 +1,38 @@
+{
+  "plugins": [
+    {
+      "name": "AK.SV Ones Plugin",
+      "author": "Hussien Essam",
+      "description": "A plugin for accessing movies from AK.SV Ones.",
+      "id": "ak_sv_ones",
+      "version": "1.0.0",
+      "icon": "https://example.com/ak-sv-icon.png",
+      "tags": [
+        "movies",
+        "streaming",
+        "arabic"
+      ],
+      "repositories": [
+        "https://raw.githubusercontent.com/hussienessam04/arabicdata/main/repo.json"
+      ],
+      "sources": []
+    },
+    {
+      "name": "SeriezTime Plugin",
+      "author": "Hussien Essam",
+      "description": "A plugin for accessing series from SeriezTime.",
+      "id": "serieztime",
+      "version": "1.0.0",
+      "icon": "https://example.com/serieztime-icon.png",
+      "tags": [
+        "series",
+        "streaming",
+        "arabic"
+      ],
+      "repositories": [
+        "https://raw.githubusercontent.com/hussienessam04/arabicdata/main/repo.json"
+      ],
+      "sources": []
+    }
+  ]
+}
